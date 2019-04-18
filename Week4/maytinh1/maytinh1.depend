@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1555558771 source:d:\work\week2\maytinh1\main.cpp
+	<windows.h>
+	<stdlib.h>
+	<malloc.h>
+	<memory.h>
+	<tchar.h>
+
