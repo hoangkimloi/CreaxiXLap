@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đồng hồ đếm ngược</title>
+        <meta charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css1.css">
+    </head>
+    <body>
+        <script language="javascript">
+
+
+            var h = null;
+            var m = null;
+            var s = null;
+            
+            var timeout = null;
+            
+            function start()
+            {
+                if (h === null)
+                {
+                    h = parseInt(document.getElementById('h_value').value);
+                    m = parseInt(document.getElementById('m_value').value);
+                    s = parseInt(document.getElementById('s_value').value);
+                }
+                if(h>=0)
+                {
+                if (s < 0){
+                    m -= 1;
+                    s = 59;
+                }
+                if (m < 0){
+                    h -= 1;
+                    m = 59;
+                }
+                if (h < 0){
+                    clearTimeout(timeout);
+                    alert('Hết giờ');
+                    return false;
+                }
+
+                document.getElementById('h').innerText = h.toString();
+                document.getElementById('m').innerText = m.toString();
+                document.getElementById('s').innerText = s.toString();
+                timeout = setTimeout(function(){
+                    --s;
+                    start();
+                }, 1000);
+            }
+        }
+            
+            function stop(){
+                clearTimeout(timeout);
+            }
+            function check(){
+                var a = parseInt(document.getElementById('h_value').value);
+                var b = parseInt(document.getElementById('m_value').value);
+                var c = parseInt(document.getElementById('s_value').value);
+                if (a<0||b<0||c<0) {
+                    alert('Nhập Sai Rồi Nhập Lại Đi =)))');
+                }
+                else {
+                    a=h;
+                    b=m;
+                    c=s;
+                    start();
+                }
+            }
+        </script>
+        <div  id="scanf">
+            <strong>
+                Nhập thông tin ban đầu: <br/>
+            </strong>
+            <input type="number" id="h_value" placeholder="Giờ" value=""/> <br>
+            <input type="number" id="m_value" placeholder="Phút" value=""/> <br>
+            <input type="number" id="s_value" placeholder="Giây" value=""/><br>
+            <input type="button" id="Start" value="Start" onclick="start();check()"/>
+            <input type="button" id="Stop" value="Stop" onclick="stop()"/>  <br> <br>
+        </div>
+         <div id="printf">
+            <span id="h">Giờ</span> :
+            <span id="m">Phút</span> :
+            <span id="s">Giây</span>
+        </div>
+    </body>
+</html>

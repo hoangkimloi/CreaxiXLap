@@ -1,0 +1,23 @@
+body{
+	background-image: url(back.jpg);
+}
+#mt{
+	margin-left: 800px;
+	margin-top: 300px;
+}
+#n1{
+	width: 300px;
+	height: 30px;
+}
+#n2{
+	width: 300px;
+	height: 30px;
+}
+#operators{
+	width: 300px;
+	height: 30px;
+}
+#result{
+	width: 300px;
+	height: 30px;
+}

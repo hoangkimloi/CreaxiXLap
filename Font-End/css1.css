@@ -1,0 +1,39 @@
+body{
+	background-color: lightblue;
+}
+#scanf{
+	margin-top: 200px;
+    margin-left: 750px;
+}
+#printf{
+	margin-left: 750px;
+	font-size: 80px;
+}
+strong{
+	color: red;
+	font-size: 50px;
+}
+#h_value{
+	margin-left:100px;
+	height: 30px;
+	width: 300px
+}
+#m_value{
+	margin-left:100px;
+	height: 30px;
+	width: 300px
+}
+#s_value{
+	margin-left:100px;
+	height: 30px;
+	width: 300px
+}
+#Start{
+	margin-left:100px;
+	width: 90px;
+	height: 40px;
+}
+#Stop{
+	width: 90px;
+	height: 40px;
+}

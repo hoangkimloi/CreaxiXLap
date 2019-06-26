@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>calculate</title>
+        <meta charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function calc()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value);
+                var n2 = parseFloat(document.getElementById('n2').value);
+                
+                var oper = document.getElementById('operators').value;
+                
+                if(oper === '+')
+                {
+                    document.getElementById('result').value = n1+n2;
+                }
+                
+                if(oper === '-')
+                {
+                    document.getElementById('result').value = n1-n2;
+                }
+                
+                if(oper === '/')
+                {
+                    document.getElementById('result').value = n1/n2;
+                }
+                
+                if(oper === 'X')
+                {
+                    document.getElementById('result').value = n1*n2;
+                }
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="mt">
+        <input type="number" id="n1" placeholder="Nhập A" /><br/><br/>
+        <input type="number" id="n2" placeholder="Nhập B" /><br/><br/>
+        
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+        </select>
+        <br><br>
+        <button onclick="calc();" style=" width: 300px;height: 30px;">=</button><br><br>
+        <input type="number" id="result" placeholder="Kết Quả" />
+        </div>
+    </body>
+</html>
